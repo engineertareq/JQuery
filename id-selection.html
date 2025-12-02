@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1>Hello Bro, I'm Jquery</h1>
+    <div></div>
+    <p>This is first paragraph</p>
+    <p class="para">This is second paragraph</p>
+    <!-- Ready The Jquery -->
+    <script>
+        $(document).ready(function () {
+            // Selection by element, id and class
+            $("p").css("background-color", "yellow");
+            $("#box").css("background-color", "lightblue");
+            $(".para").css("background-color", "pink");
+            //getting inner html data by text method
+            let txt = $("h1").text();
+            $("div").text(txt + "comming from paragraph tag");
+            // alert(txt);
+        });
+    </script>
+    
+    <!-- Selection the section or div -->
+     <!-- //div#box (shortcut) -->
+     <div id="box">
+          Hello Bangladesh
+     </div>
+</body>
+</html>
