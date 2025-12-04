@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <h1 title="h1 title">Hover to see who love you</h1>
+    <script>
+    $(document).ready(function () {
+        // Show the title attribute of h1
+        alert($("h1").attr("title"));
+
+        // Correct way to bind mouseover event
+        $("h1").on("mouseover", function () {
+            alert("Tareq love You");
+        });
+
+        // Alternatively, shorthand:
+        // $("h1").mouseover(function () {
+        //     alert("The heading was hovered!");
+        // });
+    });
+</script>
+    
+    
+</body>
+</html>

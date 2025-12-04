@@ -13,17 +13,18 @@
     <p class="para">This is second paragraph</p>
     <!-- Ready The Jquery -->
     <script>
-        $(document).ready(function () {
-            // Selection by element, id and class
-            $("p").css("background-color", "yellow");
-            $("#box").css("background-color", "lightblue");
-            $(".para").css("background-color", "pink");
-            //getting inner html data by text method
-            let txt = $("h1").text();
-            $("div").text(txt + "comming from paragraph tag");
-            // alert(txt);
-        });
-    </script>
+    $(document).ready(function () {
+        // Selection by element, id and class
+        $("p").css({"background-color": "yellow", "font-size": "50px"});
+        $("#box").css("background-color", "lightblue");
+        $(".para").css("background-color", "pink");
+
+        // Getting inner html data by text method
+        let txt = $("h1").text();
+        $("div:first").text(txt + " coming from paragraph tag");
+        // alert(txt);
+    });
+</script>
     
     <!-- Selection the section or div -->
      <!-- //div#box (shortcut) -->

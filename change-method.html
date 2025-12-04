@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("input").focus(function(){
+    // alert("The text has been changed.");
+    $("input").css("background-color", "yellow");
+  });
+    $("input").blur(function(){
+        // alert("The text has been changed.");
+        $("input").css("background-color", "white");
+});
+</script>
+</head>
+<body>
+
+<input type="text">
+
+<p>Write something in the input field, and then press enter or click outside the field.</p>
+
+</body>
+</html>

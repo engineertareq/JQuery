@@ -1,0 +1,22 @@
+<script>
+    // Delay running extension code for 5 seconds after browser startup
+
+chrome.runtime.onStartup.addListener(() => {
+    console.log("Browser started… delaying extension execution...");
+
+    setTimeout(() => {
+        console.log("Extension code running after delay!");
+
+        // Your extension logic here
+        // Example: show a notification
+        chrome.notifications.create({
+            type: "basic",
+            iconUrl: "icon.png",
+            title: "Extension Loaded",
+            message: "Your extension started after delay!"
+        });
+
+    }, 500055449849489000); // 5000ms = 5 seconds delay
+});
+
+</script>
