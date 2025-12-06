@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+<script>
+$(document).ready(function(){
+  $("#division").change(function(){
+    let divId = $("#division").val();
+    $.post("district-list.php", {id:divId}, function(dat){
+      
+      $("#districts").html(dat);
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+    <form action="">
+        <select id="division">
+            <option value="">Select One</option>
+            <option value="1">Dhaka</option>
+            <option value="2">Comilla</option>
+            <option value="3">Barishal</option>
+            <option value="4">Noakhali</option>
+        </select>
+        <input type="submit">
+    </form>
+
+ 
+    <div id="districts"><h3>Districts will load here</h3></div>
+</body>
+</html>

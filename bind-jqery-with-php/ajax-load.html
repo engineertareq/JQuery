@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+<script>
+$(document).ready(function(){
+  $("#btn2").click(function(){
+    $("#div1").load("ajax-text.txt");
+  });
+});
+</script>
+</head>
+<body>
+    <button id="btn2">Click to see data</button>
+
+    <div id="div1"><h2>Content Will appear here</h2></div>
+</body>
+</html>
