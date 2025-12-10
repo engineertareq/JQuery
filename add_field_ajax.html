@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+</head>
+<body>
+    <script>
+$(document).ready(function() {
+  // Add Field button
+  $("#add").click(function(e) {
+    $("#items").append(
+      '<div class="next-referral form-group">' +
+        '<div class="col-md-4">' +
+          '<input name="textinput[]" type="text" placeholder="Enter name of referral" class="form-control input-md">' +
+        '</div>' +
+        '<button type="button" class="remove btn btn-danger btn-sm">Remove</button>' +
+      '</div>'
+    );
+  });
+  // Remove specific referral row
+  $("body").on("click", ".remove", function(e) {
+    $(this).closest(".next-referral").remove();
+  });
+});
+</script>
+
+    <form class="form-horizontal">
+<fieldset>
+
+<!-- Form Name -->
+<legend>Referral form | Add below:</legend>
+
+<!-- Text input-->
+<div id="items" class="form-group">
+  <label class="col-md-4 control-label" for="textinput">Name</label>
+
+</div>
+
+</fieldset>
+</form>
+
+
+  <button id="add" class="btn add-more button-yellow uppercase" type="button">+ Add another referral</button> 
+</body>
+</html>
